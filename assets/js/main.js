@@ -1,6 +1,6 @@
 /**
-* Template Name: EasyFolio
-* Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
+* Template Name: Sheak Imran
+* Template URL: https://bootstrapmade.com/Sheak Imran-bootstrap-portfolio-template/
 * Updated: Feb 21 2025 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
