@@ -3,115 +3,166 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Ansible Server Configuration - Portfolio Details</title>
-  <meta name="description" content="Ansible automation for server configuration by Md Sheak Imran">
-  <meta name="keywords" content="Ansible, DevOps, Server Automation, Configuration Management">
+  <title>Ansible for Server Configuration - Portfolio Details</title>
+  <meta name="description" content="Automated server configuration and deployments using Ansible by Md Sheak Imran">
+  <meta name="keywords" content="Ansible, Configuration Management, Automation, DevOps, Linux">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body class="portfolio-details-page">
+
+<body class="service-details-page">
 
 <header id="header" class="header d-flex align-items-center sticky-top">
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-    <a href="index.html" class="logo d-flex align-items-center">
+  <div class="container-fluid container-xl d-flex flex-column flex-md-row align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center mb-2 mb-md-0">
       <h1 class="sitename">Md Sheak Imran</h1>
     </a>
-    <nav id="navmenu" class="navmenu">
-      <ul>
+    <nav id="navmenu" class="navmenu order-2 order-md-0">
+      <ul class="d-flex flex-wrap justify-content-center mb-0">
         <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#resume">Resume</a></li>
         <li><a href="index.html#portfolio" class="active">Portfolio</a></li>
+        <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
+    <div class="header-social-links d-flex align-items-center gap-2 order-3">
+      <a href="https://www.facebook.com/Sheak.imran11" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://github.com/sheakimran" class="github" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/md-sheak-imran/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://hashnode.com/@sheakimran" class="hashnode" target="_blank"><i class="bi bi-hash"></i></a>
+    </div>
   </div>
 </header>
 
 <main class="main">
   <div class="page-title">
-    <div class="breadcrumbs">
-      <nav><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active">Ansible Project</li></ol></nav>
-    </div>
     <div class="title-wrapper">
       <h1>Ansible for Server Configuration</h1>
-      <p>Automated deployment of Linux servers using Ansible roles and playbooks.</p>
+      <p>Automated configuration and deployment of Linux servers across environments using Ansible playbooks.</p>
     </div>
   </div>
 
-  <section id="portfolio-details" class="portfolio-details section">
+  <section id="service-details" class="service-details section">
     <div class="container" data-aos="fade-up">
-      <div class="row gy-4 g-lg-5">
-        <div class="col-lg-6">
-          <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid mb-4" alt="Ansible Server Configuration">
-        </div>
-        <div class="col-lg-6">
-          <div class="position-sticky" style="top: 40px">
-            <div class="portfolio-description">
-              <h2>Streamlining Server Provisioning</h2>
-              <p>
-                Using Ansible, I built reusable playbooks and roles to provision and configure Linux servers across development and production environments. This minimized human errors and significantly reduced deployment time.
-              </p>
-              <p>
-                The playbooks covered tasks such as user account management, SSH key configuration, software installation, and hardening policies.
-              </p>
-              <p>
-                Inventory was dynamically managed to group servers based on roles and environments, making the solution scalable and secure.
-              </p>
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="service-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {"delay": 5000},
+                "slidesPerView": 1,
+                "pagination": {"el": ".swiper-pagination", "type": "bullets", "clickable": true}
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/portfolio-10.webp" alt="Ansible Server Automation" class="img-fluid" loading="lazy">
+              </div>
             </div>
-            <div class="portfolio-info mt-5">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Category</strong>: Configuration Management</li>
-                <li><strong>Tools</strong>: Ansible, Linux, YAML</li>
-                <li><strong>Date</strong>: Jan 2024</li>
-                <li><strong>Repository</strong>: <a href="#">Private GitHub</a></li>
-              </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="content mt-5">
+            <h3>Server Configuration at Scale</h3>
+            <p>
+              Developed and executed Ansible playbooks to automate Linux server configuration across development, staging, and production environments. Ensured repeatability and version control of infrastructure changes.
+            </p>
+            <p>
+              Integrated Ansible with CI/CD pipelines to enforce compliance and enforce role-based deployments. Used inventory grouping and custom variables to simplify playbook logic.
+            </p>
+            <p>
+              Enhanced infrastructure reliability by minimizing manual intervention and reducing configuration drift across environments.
+            </p>
+
+            <div class="features mt-4">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h4>Idempotent Playbooks</h4>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h4>Inventory Management</h4>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h4>CI/CD Integration</h4>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h4>Multi-Environment Support</h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="col-lg-4">
+          <div class="service-info">
+            <h4>Project Information</h4>
+            <div class="info-item">
+              <i class="bi bi-clock"></i>
+              <h5>Timeline</h5>
+              <p>February 2024</p>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-person-check"></i>
+              <h5>Engineer</h5>
+              <p>Md Sheak Imran</p>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-envelope"></i>
+              <h5>Contact</h5>
+              <p><a href="mailto:sheakimran.dev@gmail.com">sheakimran.dev@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 </main>
 
 <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Sheak Imran</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/sheakimran"><i class="bi bi-github"></i></a>
-        <a href="https://www.facebook.com/Sheak.imran11"><i class="bi bi-facebook"></i></a>
-        <a href="https://hashnode.com/@sheakimran"><i class="bi bi-hash"></i></a>
-        <a href="https://www.linkedin.com/in/md-sheak-imran/"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+  <div class="container">
+    <div class="copyright text-center">
+      <p>© <strong>Md Sheak Imran</strong> — All Rights Reserved</p>
     </div>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://github.com/sheakimran"><i class="bi bi-github"></i></a>
+      <a href="https://www.facebook.com/Sheak.imran11"><i class="bi bi-facebook"></i></a>
+      <a href="https://hashnode.com/@sheakimran"><i class="bi bi-hash"></i></a>
+      <a href="https://www.linkedin.com/in/md-sheak-imran/"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
 
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>
