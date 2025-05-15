@@ -548,19 +548,26 @@
       const blogContainer = document.getElementById('blog-posts');
   
       try {
-        const response = await fetch('https://gql.hashnode.com/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+        const response = await fetch("https://gql.hashnode.com/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             query: `
               query {
-                publication(host: "sheakimran.hashnode.dev") {
-                  posts(page: 0) {
-                    title
-                    brief
-                    slug
-                    coverImage
-                    dateAdded
+                user(username: "sheakimran") {
+                  publication {
+                    posts(first: 6) {
+                      edges {
+                        node {
+                          title
+                          brief
+                          slug
+                          coverImage {
+                            url
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -569,20 +576,18 @@
         });
   
         const result = await response.json();
+        console.log("Hashnode result:", result); // Debug
   
-        // DEBUG
-        console.log("Hashnode result:", result);
+        const posts = result.data.user.publication.posts.edges;
   
-        const posts = result.data.publication.posts;
-  
-        blogContainer.innerHTML = posts.map(post => `
+        blogContainer.innerHTML = posts.map(({ node }) => `
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100 shadow-sm border-0">
-              <img src="${post.coverImage}" class="card-img-top" alt="${post.title}">
+              <img src="${node.coverImage?.url || 'https://via.placeholder.com/600x300?text=No+Image'}" class="card-img-top" alt="${node.title}">
               <div class="card-body">
-                <h5 class="card-title">${post.title}</h5>
-                <p class="card-text">${post.brief}</p>
-                <a href="https://sheakimran.hashnode.dev/${post.slug}" target="_blank" class="btn btn-primary">Read More</a>
+                <h5 class="card-title">${node.title}</h5>
+                <p class="card-text">${node.brief}</p>
+                <a href="https://sheakimran.hashnode.dev/${node.slug}" target="_blank" class="btn btn-primary">Read More</a>
               </div>
             </div>
           </div>
@@ -596,6 +601,7 @@
   
     document.addEventListener('DOMContentLoaded', fetchHashnodePosts);
   </script>
+  
   
   
 
