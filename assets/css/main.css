@@ -1952,14 +1952,6 @@ section,
   }
 }
 
-
-#blog .card {
-  transition: transform 0.3s ease;
-}
-#blog .card:hover {
-  transform: translateY(-5px);
-}
-
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
